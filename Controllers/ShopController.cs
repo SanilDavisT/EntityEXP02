@@ -28,6 +28,8 @@ namespace EntityEXP02.Controllers
 
 
             helper.filewrite(newshop);
+            
+            
             return View();
         }
     }
