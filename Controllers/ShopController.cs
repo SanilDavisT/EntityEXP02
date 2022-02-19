@@ -6,12 +6,14 @@ namespace EntityEXP02.Controllers
 {
     public class ShopController : Controller
     {
-
+        ShopDbContext _context;
         IHelper helper;
 
-        public ShopController(IHelper helper)
+        public ShopController(ShopDbContext context, IHelper helper)
         {
             this.helper = helper;
+            _context = context;
+
 
         }
 

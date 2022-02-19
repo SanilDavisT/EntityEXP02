@@ -1,0 +1,3 @@
+Item name :shirt
+Colour of item :blue
+Price of item :780

@@ -1,11 +1,21 @@
+using EntityEXP02.Models;
 using EntityEXP02.Utils;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
 builder.Services.AddSingleton<IHelper, Helper>();
+
+builder.Services.AddDbContext<ShopDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));  //Connection string
+
+// ServiceRegister.Register(builder);
+
+
+
 
 var app = builder.Build();
 
