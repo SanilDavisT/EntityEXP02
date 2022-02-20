@@ -1,0 +1,3 @@
+Item name :ghytr
+Colour of item :iujo
+Price of item :999

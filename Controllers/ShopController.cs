@@ -26,11 +26,14 @@ namespace EntityEXP02.Controllers
         public IActionResult AddDetail(Shop newshop)
         {
 
+            _context.Add(newshop);
+            _context.SaveChanges();
+
 
             helper.filewrite(newshop);
             
             
-            return View();
+            return View(newshop);
         }
     }
 }

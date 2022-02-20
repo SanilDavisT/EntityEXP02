@@ -8,6 +8,8 @@ namespace EntityEXP02.Models
         {
         }
 
-        public DbSet<Shop> Shops { get; set; } // purpose of this line ?
+        public DbSet<Shop> Shops { get; set; } // Its create table in ssmdb named "Shops"
+
+        public DbSet<Shop2> Shops2 { get; set; }
     }
 }
