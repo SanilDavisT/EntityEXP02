@@ -1,0 +1,42 @@
+﻿@model IEnumerable<EntityEXP02.Models.Shop>
+
+@{
+    ViewData["Title"] = "Index4";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index4</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.item">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.item">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.item">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
